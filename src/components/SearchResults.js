@@ -5,7 +5,7 @@ function SearchResults(props) {
     return (
         <div className="searchResults">
             <h2>Results</h2>
-            <Tracklist tracks={props.searchResults} onAdd={props.addTrack}/>
+            <Tracklist tracks={props.searchResults} onAdd={props.addTrack} isPlaylist={props.isPlaylist}/>
         </div>
     )
 };
