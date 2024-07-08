@@ -1,9 +1,10 @@
+import './SearchResults.css';
 import React from "react";
-import Tracklist from "./Tracklist";
+import Tracklist from "../Tracklist/Tracklist";
 
 function SearchResults(props) {
     return (
-        <div className="searchResults">
+        <div className="SearchResults">
             <h2>Results</h2>
             <Tracklist tracks={props.searchResults} onAdd={props.addTrack} isPlaylist={props.isPlaylist}/>
         </div>

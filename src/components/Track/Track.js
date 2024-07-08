@@ -1,4 +1,5 @@
 import React from "react";
+import './Track.css';
 
 function Track(props) {
     const handleClickAdd = () => {
@@ -15,15 +16,18 @@ function Track(props) {
     };
 
     return (
-        <div className="track">
-            <h3 id="trackName">{props.trackName}</h3>
-            <p><span>{props.trackArtist}</span> || <span>{props.trackAlbum}</span></p>
+        <div className="Track">
+            <div className="Track-information">
+                <h3>{props.trackName}</h3>
+                <p><span>{props.trackArtist}</span> || <span>{props.trackAlbum}</span></p>
+            </div>
             {/* Renders + or - depending when it's a playlist */}
             {props.isPlaylist ? (
-                <button onClick={handleClickRemove}>-</button>
-            ) : (
-                <button onClick={handleClickAdd}>+</button>
-            )}
+                    <button onClick={handleClickRemove} className="Track-button">-</button>
+                ) : (
+                    <button className='Track-button' onClick={handleClickAdd}>+</button>
+                )
+            }
         </div>
     )
 };

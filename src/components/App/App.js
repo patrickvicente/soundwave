@@ -1,9 +1,9 @@
-import '../styles/App.css';
+import './App.css';
 import React, { useCallback, useState } from 'react';
-import SearchBar from './SearchBar';
-import SearchResults from './SearchResults';
-import Playlist from './Playlist';
-import Spotify from '../util/Spotify';
+import SearchBar from '../SearchBar/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
+import Playlist from '../Playlist/Playlist';
+import Spotify from '../../util/Spotify';
 
 
 function App() {
@@ -47,20 +47,22 @@ function App() {
   }, [playlistName, currentPlaylist]);
 
   return (
-    <div className="App">
-      <header>
+    <div>
         <h1>Soundwave</h1>
-      </header>
-       <SearchBar onSearch={handleSearch} />
-       <SearchResults searchResults={searchResults} addTrack={addTrack} isPlaylist={false} /> 
-       <Playlist 
-        currentPlaylist={currentPlaylist} 
-        playlistName={playlistName}
-        onNameChange={updatePlaylistName}
-        removeTrack={removeTrack} 
-        isPlaylist={true} 
-        onSave={savePlaylist}
-        />
+      <div className="App">
+        <SearchBar onSearch={handleSearch} />
+        <div className='App-playlist'>
+          <SearchResults searchResults={searchResults} addTrack={addTrack} isPlaylist={false} /> 
+          <Playlist 
+            currentPlaylist={currentPlaylist} 
+            playlistName={playlistName}
+            onNameChange={updatePlaylistName}
+            removeTrack={removeTrack} 
+            isPlaylist={true} 
+            onSave={savePlaylist}
+            />
+          </div>
+        </div>
     </div>
   );
 }

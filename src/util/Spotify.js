@@ -1,5 +1,6 @@
-var client_id = ''; // Write your Client ID
-var redirect_uri = 'http://localhost:3000/callback';
+var client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID; // Write your Client ID
+var redirect_uri = 'http://localhost:3000/callback'
+
 var scope = 'playlist-modify-private playlist-modify-public';
 
 let accessToken;

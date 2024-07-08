@@ -1,3 +1,4 @@
+import './SearchBar.css';
 import React, { useState } from "react";
 
 function SearchBar (props) {
@@ -15,9 +16,9 @@ function SearchBar (props) {
     };
 
     return (
-        <div className="searchBar">
-            <input placeholder="Search" onChange={handleInputChange} value={searchQuery} />
-            <button onClick={handleClick}>SEARCH</button>
+        <div className="SearchBar">
+            <input placeholder="Enter a Song, Artist or Album" onChange={handleInputChange} value={searchQuery} />
+            <button onClick={handleClick} className='SearchButton'>SEARCH</button>
         </div>
     );
 };

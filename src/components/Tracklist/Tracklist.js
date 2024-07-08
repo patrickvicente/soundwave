@@ -1,10 +1,11 @@
+import './Tracklist.css';
 import React from "react";
-import Track from "./Track";
+import Track from "../Track/Track";
 
 function Tracklist({tracks, onAdd, onRemove, isPlaylist}) {
 
     return (
-        <div className="tracklist">
+        <div className="Tracklist">
             {tracks.length > 0 ? (
                 tracks.map((track) => (
                     <Track
