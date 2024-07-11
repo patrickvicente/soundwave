@@ -25,8 +25,8 @@
     cursor: pointer;
     width: 8rem;
     padding: .5rem 0;
-    border-radius: 54px;
-    background-color: #010c3f;
+    border-radius: 25px;
+    background-color: #160133;
     text-align: center;
     font-size: .8 rem;
     transition: background-color .25s;
@@ -36,5 +36,5 @@
 }
 
 .SearchButton:hover {
-    background-color: rgba(108, 65, 233, .7);
+    background-color: rgba(46, 1, 109, 0.7);
 }

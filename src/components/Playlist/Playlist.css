@@ -4,10 +4,10 @@
     align-items: center;
     overflow-y: scroll;
     width: 35%;
-    max-height: 950px;
-    padding: 2.5rem 1.16rem;
-    background-color: rgba(0, 0, 0, .3);
-    box-shadow: 0 4px 2px 2px #000000;
+    max-height: 900px;
+    padding: 36px 25px;
+    background-color: rgba(39, 22, 76, 0.30);
+    box-shadow: 0 4px 2px 2px rgba(39, 22, 76, 0.30);
 }
 
 .Playlist input {
@@ -18,7 +18,7 @@
     border-bottom: 1px solid #6f6f6f;
     font-family: 'Poppins', sans-serif;
     font-size: 1.55rem;
-    color: #fff;
+    color: #D8D1D1;
   }
 
   .Playlist-save {
@@ -28,7 +28,7 @@
     border-radius: 54px;
     border-width: 0px;
     margin-top: 1.27rem;
-    background-color: #6c41ec;
+    background-color: #160133;
     text-align: center;
     font-size: .83rem;
     transition: background-color .25s;
@@ -37,7 +37,7 @@
   }
 
   .Playlist-save:hover {
-    background-color: #430ce7;
+    background-color: rgba(46, 1, 109, 0.7);
   }
 
   ::-webkit-scrollbar {

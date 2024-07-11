@@ -15,11 +15,19 @@ function Track(props) {
         props.onRemove(props.trackId);
     };
 
+    const truncate = (word) => {
+        if (word.length > 45) {
+            return word.slice(0, 45)+ '...';
+        }
+
+        return word;
+    }; 
+
     return (
         <div className="Track">
             <div className="Track-information">
-                <h3>{props.trackName}</h3>
-                <p><span>{props.trackArtist}</span> || <span>{props.trackAlbum}</span></p>
+                <h3>{truncate(props.trackName)}</h3>
+                <p>{props.trackArtist} || <span>{truncate(props.trackAlbum)}</span></p>
             </div>
             {/* Renders + or - depending when it's a playlist */}
             {props.isPlaylist ? (
